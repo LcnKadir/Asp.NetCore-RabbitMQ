@@ -1,6 +1,8 @@
 ﻿using RabbitMQ.Client;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -29,25 +31,20 @@ namespace RabbitMQ.publisher
 
             var chanell = connection.CreateModel();
 
-            chanell.ExchangeDeclare("logs-topic", durable: true, type: ExchangeType.Topic);
+            chanell.ExchangeDeclare("header-exchange", durable: true, type: ExchangeType.Headers);
 
+            Dictionary<string, object> headers = new Dictionary<string, object>();
+            headers.Add("formats", "pdf");
+            headers.Add("shape2", "a4"); 
+            //headers.Add("shape", "a4");
 
-            Random rnd = new Random();
-            Enumerable.Range(1, 50).ToList().ForEach(x =>
-            {
-                LogNames log1 = (LogNames)rnd.Next(1, 5);
-                LogNames log2 = (LogNames)rnd.Next(1, 5);
-                LogNames log3 = (LogNames)rnd.Next(1, 5);
-                
+            var properties = chanell.CreateBasicProperties();
+            properties.Headers = headers;
 
-                var routkey = $"{log1}.{log2}.{log3}";
-                string message = $"log-type: {log1}-{log2}-{log3}";
-                var messageBody = Encoding.UTF8.GetBytes(message);
-                chanell.BasicPublish("logs-topic", routkey, null, messageBody);
-
-                Console.WriteLine($"Log gönderilmiştir: {message}");
-
-            });
+            chanell.BasicPublish("header-exchange", string.Empty, properties, Encoding.UTF8.GetBytes("header mesajım"));
+            
+            
+            Console.WriteLine("mesaj gönderilmiştir.");
 
 
             Console.ReadLine();

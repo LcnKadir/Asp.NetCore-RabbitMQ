@@ -1,6 +1,7 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
@@ -17,7 +18,7 @@ namespace RabbitMQ.subscriber
             using var connection = factory.CreateConnection();
 
             var chanell = connection.CreateModel();
-            
+            chanell.ExchangeDeclare("header-exchange", durable: true, type: ExchangeType.Headers);
 
 
             chanell.BasicQos(0, 1, false);
@@ -25,10 +26,15 @@ namespace RabbitMQ.subscriber
 
 
             var queueName = chanell.QueueDeclare().QueueName;
-            //var routkey = "*.Error.*";
-            //var routkey = "*.*.Warning";            
-            var routkey = "Info.#";
-            chanell.QueueBind(queueName, "logs-topic", routkey);
+
+            Dictionary<string, object> headers = new Dictionary<string, object>();
+            headers.Add("formats", "pdf");
+            headers.Add("shape", "a4");
+            headers.Add("x-match", "any"); //Verilerin içinde bir tane istenilen olsa bile veriyi çeker. //It pulls the data even if there is only one desired one in the data. 
+            //headers.Add("x-match", "all"); //Gönderilen verilerin bire bir aynısı olması gerekir. //The data sent must be identical.
+
+
+            chanell.QueueBind(queueName, "header-exchange", String.Empty, headers);
 
 
             chanell.BasicConsume(queueName, false, cunsormer);
@@ -44,8 +50,6 @@ namespace RabbitMQ.subscriber
                 Thread.Sleep(1500);
 
                 Console.WriteLine("Gelen Mesaj:" + message);
-
-                File.AppendAllText("log-critical.txt", message + "\n");
 
                 chanell.BasicAck(e.DeliveryTag, false);
             };
