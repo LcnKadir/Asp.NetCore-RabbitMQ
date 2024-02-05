@@ -17,19 +17,20 @@ namespace RabbitMQ.subscriber
             using var connection = factory.CreateConnection();
 
             var chanell = connection.CreateModel();
-
-            var randomQueue = chanell.QueueDeclare().QueueName;
-
-            chanell.QueueBind(randomQueue, "logs-fanout", "", null);
-
+            
 
 
             chanell.BasicQos(0, 1, false);
-
             var cunsormer = new EventingBasicConsumer(chanell);
 
 
-            var queueName = "direct-queue-Critial";
+            var queueName = chanell.QueueDeclare().QueueName;
+            //var routkey = "*.Error.*";
+            //var routkey = "*.*.Warning";            
+            var routkey = "Info.#";
+            chanell.QueueBind(queueName, "logs-topic", routkey);
+
+
             chanell.BasicConsume(queueName, false, cunsormer);
 
 
@@ -42,9 +43,9 @@ namespace RabbitMQ.subscriber
 
                 Thread.Sleep(1500);
 
-                Console.WriteLine("Gelen Mesaj:"+message);
+                Console.WriteLine("Gelen Mesaj:" + message);
 
-                File.AppendAllText("log-critical.txt", message+"\n");
+                File.AppendAllText("log-critical.txt", message + "\n");
 
                 chanell.BasicAck(e.DeliveryTag, false);
             };

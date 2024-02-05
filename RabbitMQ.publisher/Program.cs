@@ -9,10 +9,10 @@ namespace RabbitMQ.publisher
 
     public enum LogNames
     {
-        Critial=1,
-        Error=2,
-        Warning=3,
-        Info=4
+        Critial = 1,
+        Error = 2,
+        Warning = 3,
+        Info = 4
     }
 
 
@@ -29,31 +29,21 @@ namespace RabbitMQ.publisher
 
             var chanell = connection.CreateModel();
 
-            chanell.ExchangeDeclare("logs-direct", durable: true, type: ExchangeType.Fanout);
-
-            Enum.GetNames(typeof(LogNames)).ToList().ForEach(x =>
-            {
-                var routkey = $"route-{x}";
-                var queueName = $"direct-queue-{x}";
-                chanell.QueueDeclare(queueName, true, false, false);
-
-                chanell.QueueBind(queueName, "logs-direct", routkey, null);
-            });
+            chanell.ExchangeDeclare("logs-topic", durable: true, type: ExchangeType.Topic);
 
 
-
+            Random rnd = new Random();
             Enumerable.Range(1, 50).ToList().ForEach(x =>
             {
-                LogNames log = (LogNames) new Random().Next(1,5);
+                LogNames log1 = (LogNames)rnd.Next(1, 5);
+                LogNames log2 = (LogNames)rnd.Next(1, 5);
+                LogNames log3 = (LogNames)rnd.Next(1, 5);
+                
 
-                string message = $"log-type: {log}";
-
+                var routkey = $"{log1}.{log2}.{log3}";
+                string message = $"log-type: {log1}-{log2}-{log3}";
                 var messageBody = Encoding.UTF8.GetBytes(message);
-
-                var routkey = $"route-{log}";
-
-
-                chanell.BasicPublish("logs-direct", routkey, null, messageBody);
+                chanell.BasicPublish("logs-topic", routkey, null, messageBody);
 
                 Console.WriteLine($"Log gönderilmiştir: {message}");
 
