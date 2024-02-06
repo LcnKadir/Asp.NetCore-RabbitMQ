@@ -54,17 +54,13 @@
               "target": "Package",
               "version": "[7.0.15, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[7.0.11, )"
-            },
             "RabbitMQ.Client": {
               "target": "Package",
-              "version": "[7.0.0-alpha.2, )"
+              "version": "[6.8.1, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.1, )"
             }
           },
           "imports": [
