@@ -2,6 +2,6 @@
 {
     public class ProductImageCreatedEvent
     {
-        public string Image {  get; set; }
+        public string ImageName {  get; set; }
     }
 }
