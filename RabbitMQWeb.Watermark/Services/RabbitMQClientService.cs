@@ -29,6 +29,7 @@ namespace RabbitMQWeb.Watermark.Services
 
         public IModel Connect()
         {
+
             _connection = _connectionFactory.CreateConnection();
             
 

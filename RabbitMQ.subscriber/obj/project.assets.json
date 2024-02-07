@@ -41,6 +41,20 @@
           }
         }
       },
+      "RabbitMQ.publisher/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1",
+          "Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RabbitMQ.publisher.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RabbitMQ.publisher.dll": {}
+        }
+      },
       "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -120,6 +134,11 @@
         "version.txt"
       ]
     },
+    "RabbitMQ.publisher/1.0.0": {
+      "type": "project",
+      "path": "../RabbitMQ.publisher/RabbitMQ.publisher.csproj",
+      "msbuildProject": "../RabbitMQ.publisher/RabbitMQ.publisher.csproj"
+    },
     "Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/Shared.csproj",
@@ -129,6 +148,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "RabbitMQ.Client >= 6.2.1",
+      "RabbitMQ.publisher >= 1.0.0",
       "Shared >= 1.0.0"
     ]
   },
@@ -159,6 +179,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQ.publisher\\RabbitMQ.publisher.csproj": {
+              "projectPath": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQ.publisher\\RabbitMQ.publisher.csproj"
+            },
             "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\Shared\\Shared.csproj": {
               "projectPath": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\Shared\\Shared.csproj"
             }
