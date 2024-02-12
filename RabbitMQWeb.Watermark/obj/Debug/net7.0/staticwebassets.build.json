@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5NSbDUSBfAsHg2UWZzsvMD7xw/x2+4zZ6n3ngnuWnzA=",
+  "Hash": "49F2Ac05n1+EMOF3ArShyJMJDt9wDb6U/TT54IS71jU=",
   "Source": "RabbitMQWeb.Watermark",
   "BasePath": "_content/RabbitMQWeb.Watermark",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\Images\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg",
+      "SourceId": "RabbitMQWeb.Watermark",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\",
+      "BasePath": "_content/RabbitMQWeb.Watermark",
+      "RelativePath": "Images/4a717791-94cc-4267-878d-1d81297e0ee2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\Images\\watermarks\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg",
+      "SourceId": "RabbitMQWeb.Watermark",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\",
+      "BasePath": "_content/RabbitMQWeb.Watermark",
+      "RelativePath": "Images/watermarks/4a717791-94cc-4267-878d-1d81297e0ee2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\watermarks\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg"
     },
     {
       "Identity": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\js\\site.js",

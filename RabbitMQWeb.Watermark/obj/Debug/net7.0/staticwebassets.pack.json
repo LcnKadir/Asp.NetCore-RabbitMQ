@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\Images\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg",
+      "PackagePath": "staticwebassets\\Images\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\Images\\watermarks\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg",
+      "PackagePath": "staticwebassets\\Images\\watermarks\\4a717791-94cc-4267-878d-1d81297e0ee2.jpg"
+    },
+    {
       "Id": "C:\\Users\\kadir\\OneDrive\\Masaüstü\\RabbitMQ\\RabbitMQWeb.Watermark\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
