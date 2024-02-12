@@ -2,7 +2,7 @@
 
 namespace RabbitMQWeb.ExcelCreate.Models
 {
-    public enum FileStates
+    public enum FileStatus
     {
         Creating,
         Completed
@@ -14,7 +14,7 @@ namespace RabbitMQWeb.ExcelCreate.Models
         public string FileName { get; set; }
         public string FilePath { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public string FileStatus {  get; set; }
+        public FileStatus FileStatus {  get; set; }
 
         [NotMapped]
         public string GetCreatedDate => CreatedDate.HasValue ? CreatedDate.Value.ToShortDateString() : "-";
