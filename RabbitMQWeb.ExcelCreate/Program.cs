@@ -1,5 +1,3 @@
-
-
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client;
@@ -9,10 +7,7 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -31,7 +26,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(opt =>
 })
 .AddEntityFrameworkStores<AppDbContext>();
 
-
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -43,7 +38,7 @@ using (var scope = app.Services.CreateScope())
     await appDbContext.Database.MigrateAsync();
     if (!appDbContext.Users.Any())
     {
-        await userManager.CreateAsync(new IdentityUser { UserName = "deneme", Email = "deneme@outlook.com" }, "Parola1234!!");
+        await userManager.CreateAsync(new IdentityUser { UserName = "Kadir", Email = "deneme@outlook.com" }, "Parola1234!!");
         await userManager.CreateAsync(new IdentityUser { UserName = "deneme2", Email = "deneme2@outlook.com" }, "Parola1234!!");
     }
 }
@@ -67,6 +62,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();

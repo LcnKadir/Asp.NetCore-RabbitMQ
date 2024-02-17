@@ -26,8 +26,8 @@ namespace RabbitMQ.publisher
         static void Main(string[] args)
         {
             var factory = new ConnectionFactory();
-            factory.Uri = new Uri("amqp://localhost:5672"); //works with docker
-            //factory.Uri = new Uri("amqps://inrnmhyu:iMdQiUhib6hEWobcG_GkWyGvD4a5pamJ@cougar.rmq.cloudamqp.com/inrnmhyu");
+           /* factory.Uri = new Uri("amqp://localhost:5672")*/; //works with docker
+            factory.Uri = new Uri("amqps://inrnmhyu:iMdQiUhib6hEWobcG_GkWyGvD4a5pamJ@cougar.rmq.cloudamqp.com/inrnmhyu");
 
             using var connection = factory.CreateConnection();
 

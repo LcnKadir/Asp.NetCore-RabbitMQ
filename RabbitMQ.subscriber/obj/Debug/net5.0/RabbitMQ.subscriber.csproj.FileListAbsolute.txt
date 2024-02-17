@@ -1,3 +1,7 @@
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.deps.json
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.runtimeconfig.json
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.runtimeconfig.dev.json
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.exe
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.subscriber.exe
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.subscriber.deps.json
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.subscriber.runtimeconfig.json
@@ -5,6 +9,10 @@ C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.subscriber.dll
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.subscriber.pdb
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.dll
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\Shared.dll
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.pdb
+C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\Shared.pdb
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.csproj.AssemblyReference.cache
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.AssemblyInfoInputs.cache
@@ -16,11 +24,3 @@ C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.pdb
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.genruntimeconfig.cache
 C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\ref\RabbitMQ.subscriber.dll
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\Shared.dll
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\Shared.pdb
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.deps.json
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.runtimeconfig.json
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.runtimeconfig.dev.json
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.exe
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.dll
-C:\Users\kadir\OneDrive\Masaüstü\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.publisher.pdb

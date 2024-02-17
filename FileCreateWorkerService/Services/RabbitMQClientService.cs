@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FileCreateWorkerService.Services
 {
-    public class RabbitMQClientService
+    public class RabbitMQClientService : IDisposable
     {
         private readonly ConnectionFactory _connectionFactory;
         private IConnection _connection;

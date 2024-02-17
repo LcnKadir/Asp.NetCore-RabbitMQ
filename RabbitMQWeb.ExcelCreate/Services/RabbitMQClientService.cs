@@ -2,7 +2,7 @@
 
 namespace RabbitMQWeb.ExcelCreate.Services
 {
-    public class RabbitMQClientService
+    public class RabbitMQClientService : IDisposable
     {
         private readonly ConnectionFactory _connectionFactory;
         private IConnection _connection;

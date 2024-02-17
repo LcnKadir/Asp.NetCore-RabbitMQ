@@ -6,22 +6,26 @@ using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 
 IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices((context, services) =>
+    .ConfigureServices(services =>
     {
-        services.AddDbContext<AdventureWorks2012Context>(opt =>
+        IConfiguration Configuration = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
+
+        services.AddSingleton<RabbitMQClientService>();
+
+        services.AddDbContext<AdventureWorks2019Context>(opt =>
         {
-            opt.UseSqlServer(context.Configuration.GetConnectionString("SqlServer"));
+            opt.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
         });
 
-        services.AddScoped<RabbitMQClientService>();
+        services.AddSingleton(sp => new ConnectionFactory()
+        {
 
-        IConfiguration Configuration = context.Configuration;
-        services.AddSingleton(sp => new ConnectionFactory() { Uri = new Uri(Configuration.GetConnectionString("RabbitMQ")), DispatchConsumersAsync = true });
-
+            Uri = new Uri(Configuration.GetConnectionString("RabbitMQ")),
+            DispatchConsumersAsync = true
+        });
 
         services.AddHostedService<Worker>();
-    })
-    .Build();
+    }).Build();
 
 
 
