@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQWeb.ExcelCreate.Hubs;
 using RabbitMQWeb.ExcelCreate.Models;
 
 namespace RabbitMQWeb.ExcelCreate.Controllers
@@ -11,10 +13,12 @@ namespace RabbitMQWeb.ExcelCreate.Controllers
     public class FilesController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IHubContext<MyHub> _hubContext;
 
-        public FilesController(AppDbContext context)
+        public FilesController(AppDbContext context, IHubContext<MyHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         [HttpPost]
@@ -41,6 +45,8 @@ namespace RabbitMQWeb.ExcelCreate.Controllers
 
             await _context.SaveChangesAsync();
 
+            //SignalR Notification
+            await _hubContext.Clients.User(userFile.UserId).SendAsync("DosyaOluşturuldu");
 
             return Ok();
         }

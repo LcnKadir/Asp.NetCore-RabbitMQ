@@ -2,6 +2,26 @@
 @{
     ViewData["Title"] = "Files";
 }
+
+@section Scripts
+    {
+    <script>
+        $(document).ready(function () {
+            var hasStartCreatingExcel = '@TempData["StartCreatingExcel"]';
+            if (hasStartCreatingExcel) {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Excel dosyanız oluşturuluyor, lütfen bekleyin, tamamlandığı zaman bildirim alacaksınız",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            }
+        });
+    </script>
+}
+
+
 <h1>Files</h1>
 <table class=" table table-striped">
     <thead>
